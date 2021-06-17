@@ -225,7 +225,8 @@ body {
     text-align: center;
 }
 
-.hero .button {
+.hero .button,
+.button-send {
     color: var(--white-color);
     background-color: var(--accent-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -608,11 +609,11 @@ body {
 }
 .container-footer {
     display: flex;
+    justify-content: space-between;
 }
 .footer-block {
     margin-left: 70px;
     margin-top: 12px;
-    height: 80px;
     width: 206px;
 }
 .footer-block .social-networks {
@@ -626,6 +627,50 @@ body {
 .footer-join {
     color: var(--white-color);
     text-transform: uppercase;
+}
+.footer-mailing {
+    width: 570px;
+    justify-content: flex-end;
+    margin-top: 12px;
+    margin-left: 93px;
+}
+.mailing-block {
+    display: flex;
+    margin-top: 20px;
+}
+.footer-input {
+    margin-right: 12px;
+    width: 358px;
+    height: 50px;
+    padding-left: 16px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-label ::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: rgba(255, 255, 255, 0.6);
+}
+.footer-subscribe .btn-subscribe {
+    padding-left: 29px;
+    padding-right: 62px;
+    width: 200px;
+}
+.footer-subscribe {
+    position: relative;
+}
+.icon-subscribe {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+
+    fill: var(--white-color);
 }
 
 /* MODAL style */
@@ -688,9 +733,7 @@ body {
 }
 
 .form {
-    width: 448px;
     margin: 40px;
-    outline: 1px solid pink;
 }
 .form-title {
     text-align: center;
@@ -707,6 +750,11 @@ body {
     margin-bottom: 28px;
     position: relative;
 }
+
+.form-contacts:last-of-type {
+    margin-bottom: 0px;
+}
+
 .form-contacts .text {
     position: absolute;
     top: 80%;
@@ -717,7 +765,7 @@ body {
     letter-spacing: 0.01em;
     
 }
-.form-contacts .form-input {
+.form-input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding: 11px; 
@@ -738,6 +786,64 @@ body {
     fill: var(--accent-color);
     
 }
-.form-contacts:focus-within .form-input {
+.form-contacts:focus-within .form-input,
+.form-comments:focus-within .com-input {
     outline-color: var(--accent-color);
+}
+.form-comments {
+    display: flex;
+    flex-direction: column;
+}
+.com-input {
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 16px;
+}
+.form-comments .text {
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
+
+.form-comments ::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+}
+
+.button-send:hover,
+.button-send:focus {
+    background-color: var(--btn-hover-color);
+}
+
+.form-button {
+    text-align: center;
+    margin-top: 30px;
+}
+.button-send {
+    padding-left: 56px;
+    padding-right: 55px;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--title-text-color);
+    border-radius: 2px;
+}
+.checkbox:checked {
+
+}
+/* .link-form {
+    color: var(--accent-color);
+    text-decoration: underline;
+} */
+
+.form-contacts {
+    margin-top: 20px;
 }
